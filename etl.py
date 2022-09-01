@@ -9,7 +9,7 @@ from pyspark.sql.functions import input_file_name, current_timestamp
 # Define variables used in code below
 file_path = "/databricks-datasets/structured-streaming/events"
 username = spark.sql("SELECT regexp_replace(current_user(), '[^a-zA-Z0-9]', '_')").first()[0]
-table_name = f"{username}_etl_quickstart"
+table_name = f"{username}_quickstart"
 checkpoint_path = f"/tmp/{username}/_checkpoint/etl_quickstart"
  
 # Clear out data from previous demo execution
